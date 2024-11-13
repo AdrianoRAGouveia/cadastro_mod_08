@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Contatos</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h1>Cadastro de Contatos</h1>
+
+    <form id="form-contato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Contatos</h2>
+    <table id="tabela-contatos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+        const form = document.getElementById('form-contato');
+        const tabelaContatos = document.getElementById('tabela-contatos').getElementsByTagName('tbody')[0];
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+
+            const novaLinha = tabelaContatos.insertRow();
+
+            const cellNome = novaLinha.insertCell(0);
+            const cellTelefone = novaLinha.insertCell(1);
+
+            cellNome.textContent = nome;
+            cellTelefone.textContent = telefone;
+
+            document.getElementById('nome').value = '';
+            document.getElementById('telefone').value = '';
+        });
+    </script>
+</body>
+</html>

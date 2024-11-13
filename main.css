@@ -1,0 +1,41 @@
+
+body{
+    background-color: #b5c9f0;
+    padding-top: 100px;
+}
+
+
+table {
+    width: 50%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto ', sans-serif;
+}
+
+th {
+    padding: 20px;
+    text-align: left;
+    
+}
+
+form {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+form input {
+    font-size: 18px;
+    background-color:#fff;
+    border: none;
+    padding: 2px;
+}
+
+
+
+
+
